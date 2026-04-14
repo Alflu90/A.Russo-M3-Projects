@@ -1,0 +1,20 @@
+Progetto 1 – Clustering su Iris Dataset
+
+Inizialmente, è stata effettuata una fase di data exploration e preprocessing, in cui il dataset è stato analizzato e successivamente standardizzato per rendere le feature confrontabili tra loro.
+
+Successivamente, sono stati utilizzati due metodi per stimare il numero ottimale di cluster:
+
+- DBSCAN, che ha permesso di individuare la struttura dei dati basata sulla densità, analizzando il numero di cluster e i punti rumorosi al variare di eps.
+- Elbow Method con K-Means, che ha evidenziato un punto di flesso nel grafico dell’inerzia.
+
+Entrambi i metodi hanno suggerito come valore ottimale K = 3.
+
+A questo punto è stato applicato l’algoritmo K-Means, ottenendo una suddivisione dei dati in tre cluster.
+La qualità del clustering è stata valutata tramite il Silhouette Score, che ha indicato una buona separazione tra i gruppi.
+
+Infine, i risultati sono stati visualizzati:
+
+- tramite un grafico 2D utilizzando alcune feature del dataset
+- tramite PCA (EXTRA), per ottenere una rappresentazione più chiara della separazione tra i cluster.
+
+In conclusione, il progetto ha dimostrato come diverse tecniche di clustering possano essere utilizzate in modo complementare per identificare una struttura significativa nei dati non etichettati.
