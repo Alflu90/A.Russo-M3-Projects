@@ -1,0 +1,35 @@
+OVERVIEW
+
+Questo progetto ha lo scopo di costruire una pipeline completa di Machine Learning per un problema di regressione, 
+utilizzando il dataset Diabetes disponibile in scikit-learn.
+
+L’obiettivo è prevedere un valore target continuo a partire da diverse variabili cliniche.
+
+Il lavoro è stato sviluppato seguendo un flusso completo tipico di un progetto di data science:
+
+- Si è partiti da una fase di analisi esplorativa dei dati (EDA), attraverso statistiche descrittive, istogrammi, boxplot e scatter matrix, 
+con l’obiettivo di comprendere la distribuzione delle variabili, individuare eventuali correlazioni e valutare la presenza di outlier.
+
+- Successivamente è stata effettuata la preparazione dei dati, dividendo il dataset in training e test set e applicando la standardizzazione 
+delle feature per rendere confrontabili i modelli sensibili alla scala.
+
+- Nella fase centrale del progetto sono stati implementati e confrontati diversi modelli di regressione, tra cui modelli lineari e non lineari:
+Linear Regression, Ridge, Lasso, Decision Tree, K-Nearest Neighbors e Support Vector Regression.
+
+- La valutazione iniziale è stata effettuata tramite K-Fold Cross Validation, utilizzando come metrica il Negative Mean Squared Error (NMSE), 
+al fine di ottenere una stima robusta delle prestazioni dei modelli sul training set.
+
+- In seguito è stato eseguito un processo di ottimizzazione degli iperparametri tramite Grid Search, con particolare attenzione alla regressione Ridge.
+
+- Il modello ottimizzato è stato poi valutato sul test set utilizzando le metriche Mean Squared Error (MSE) e R², per misurare rispettivamente 
+l’errore medio e la capacità esplicativa del modello.
+
+- È stata inoltre analizzata la learning curve, per studiare il comportamento del modello rispetto alla dimensione del training set e valutare 
+eventuali fenomeni di overfitting o underfitting.
+
+- Infine, è stata applicata la Principal Component Analysis (PCA) per ridurre la dimensionalità del dataset a due componenti principali,
+consentendo una visualizzazione bidimensionale della struttura dei dati e del comportamento del modello nello spazio ridotto.
+
+Nel complesso, i risultati mostrano che i modelli lineari regolarizzati (Ridge e Lasso) ottengono le prestazioni migliori, 
+suggerendo che la relazione tra feature e target sia prevalentemente lineare. I modelli più complessi, come Decision Tree e SVM non ottimizzati, 
+mostrano invece prestazioni inferiori.

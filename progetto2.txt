@@ -1,0 +1,16 @@
+Project Overview
+
+Il presente progetto analizza l’applicazione di diversi modelli di regressione al dataset Linnerud, affrontando un problema di regressione multi-target.
+In particolare, il dataset include tre variabili target di natura fisiologica: Weight, Waist e Pulse.
+
+Al fine di semplificare l’analisi e consentire un confronto più diretto tra i modelli, il problema è stato ricondotto a due distinti scenari di regressione a target singolo:
+
+    1. Riduzione tramite Principal Component Analysis (PCA): i target, opportunamente standardizzati, sono stati trasformati in un’unica componente principale (PC1), 
+    rappresentativa della massima varianza condivisa.
+
+    2. Selezione manuale del target: è stata scelta la variabile Waist come target singolo, in quanto ritenuta significativa e facilmente interpretabile.
+
+Successivamente, sono stati addestrati e confrontati tre modelli di regressione: Regressione Lineare, Ridge Regression e Lasso Regression.
+L’addestramento è stato effettuato utilizzando l’intero set di feature, previamente standardizzato per garantire condizioni ottimali di apprendimento e confrontabilità tra i modelli.
+Le prestazioni sono state valutate mediante metriche standard quali Mean Squared Error (MSE) e coefficiente di determinazione (R²), al fine di analizzare l’accuratezza predittiva e 
+la capacità esplicativa dei modelli nei due scenari considerati.
